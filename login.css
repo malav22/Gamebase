@@ -1,0 +1,16 @@
+body{
+    background-image: url(img/background.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.center-form{
+    text-align: center;
+    padding: 20px;
+}
+a:hover{
+    opacity:50%;  
+}
+.submit-button{
+    background-color: #2196F3;
+    font-size: 20px;
+}
