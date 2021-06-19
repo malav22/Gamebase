@@ -3,26 +3,50 @@
    <title>Gamebase</title>
    <link rel="stylesheet" href="homepage.css">
    <link href="img/favicon.png" rel="shortcut icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="navbar">
-    <a>GameZone</a>
+    <a >FunCrown</a>
     <a href="homepage.html"><img src="img/home.png"  width="20px" height="20px"> </a>
     <a href="contact.html" target="_self">Contact</a>
     <a href="login.html" target="_self">Login</a>
     <a href="signup.html" target="_self">SignUp</a>
+    <a href=# class="loggedin">Logout</a>
     <div class="search-container">
      <form>
        <input type="submit" value="Search">
-       <input type="text" placeholder="Search" name="search">
+       <input id="searchbar" type="text" placeholder="Search" name="search" onkeyup="search_fun()">
      </form>
     </div>
     
 </div>
 <div class="main">
-  <h1>Welcome to GameZone</h1>
-  <h1>Have fun</h1>
-</div>   
+  <h1>Welcome to FunCrown</h1>
+  <h4>The ultimate Gaming Zone</h4><br>
+  <h1>Have fun</h1><br>
+</div> 
+<p id="search-box">Search Suggestions :</p>  
+<p id="search-before" style="color: #f00;text-align:center;">Your search suggestions will appear here.<p>
+<p id="search-result"></p>
+<p id="new-addition">Games recently added : </p>
+<ul id="myUL" style="list-style-type:none;margin:0;padding:0;">
+  <li><a href="#">Game1</a></li>
+  <li><a href="#">Game2</a></li>
+  <li><a href="#">Game3</a></li>
+  <li><a href="#">Game4</a></li>
+  <li><a href="#">Game5</a></li>
+  <li><a href="#">Game6</a></li>
+  <li><a href="#">Game7</a></li>
+  <li><a href="#">Game8</a></li>
+  <li><a href="#">Game9</a></li>
+  <li><a href="#">Game10</a></li>
+  <li><a href="#">Game11</a></li>
+  <li><a href="#">Game12</a></li>
+  <li><a href="#">Game13</a></li>
+  <li><a href="#">Game14</a></li>
+</ul>
+
 <script src="homepage.js"></script>
 </body>
  <footer>

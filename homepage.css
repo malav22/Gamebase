@@ -1,8 +1,10 @@
 body{
-  background-image:url(img/background.jpg);
+  /* background-image:url(img/background.jpg); */
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .navbar {
   overflow: hidden;
   background-color: rgb(63, 63, 63);
@@ -21,6 +23,7 @@ body{
   padding: 16px 16px;
   text-decoration: none;
 }
+
 .navbar a:hover {
   background: rgb(56, 56, 56);
 }
@@ -52,10 +55,14 @@ body{
   padding-top: 20px;
   margin-top: 50px; /* Add a top margin to avoid content overlay */
 }
-h1{
+h1 {
     text-align: center;
     font-size: 50px;
     color: rgb(236, 236, 236);
+}
+h4{
+  text-align: center;
+  color: rgb(236, 236, 236);
 }
 footer{
   color: #fff;
@@ -63,4 +70,34 @@ footer{
 }
 footer p a:hover{
   opacity: 50%;
+}
+#search-box{
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+#myUL{
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+#new-addition{
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+#searchbar{
+  background-image: url(img/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: 8px 4px;
+  background-size: 20px 20px;
+  padding: 5px 5px;
+}
+#search-result{
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+  margin:auto;
+  width: 500px;
+  height: 200px;
 }
