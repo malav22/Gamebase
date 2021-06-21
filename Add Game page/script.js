@@ -33,11 +33,11 @@ function renderCafe(doc){
 });
 }
 // getting data
-db.collection('Games').get().then(snapshot =>{
-    snapshot.docs.forEach(doc => {
-        renderCafe(doc);
-    })
-})
+// db.collection('Games').get().then(snapshot =>{
+//     snapshot.docs.forEach(doc => {
+//         renderCafe(doc);
+//     })
+// })
 
 // saving data
 
@@ -50,3 +50,17 @@ form.addEventListener('submit', (e) => {
     form.games.value = '';
     form.links.value = '';
 })
+
+// real time listener
+db.collection('Games').orderBy('Game').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        console.log(change.doc.data());
+        if(change.type == 'added'){
+            renderCafe(change.doc);
+        } else if (change.type == 'removed'){
+            let li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
+            cafeList.removeChild(li);
+        }
+    });
+});

@@ -1,3 +1,5 @@
+document.getElementById("search-result").innerHTML = "Your search suggestions will appear here.";
+document.getElementById("search-result").style.color="#F00";
 function search_fun(){
   
   var input, filter, ul, li, a, i, txtValue;
@@ -12,7 +14,6 @@ function search_fun(){
 
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
-    document.getElementById("search-before").style.display="none";
 
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
     document.getElementById("search-result").innerHTML = document.getElementById("search-result").innerHTML + li[i].innerHTML + "<br>";
@@ -40,8 +41,22 @@ function renderCafe(doc){
 };
 
 // getting data
-db.collection('Games').get().then(snapshot =>{
-  snapshot.docs.forEach(doc => {
-      renderCafe(doc);
-  })
-})
+// db.collection('Games').get().then(snapshot =>{
+//   snapshot.docs.forEach(doc => {
+//       renderCafe(doc);
+//   })
+// })
+
+// real time listener
+db.collection('Games').orderBy('Game').onSnapshot(snapshot => {
+  let changes = snapshot.docChanges();
+  changes.forEach(change => {
+      console.log(change.doc.data());
+      if(change.type == 'added'){
+          renderCafe(change.doc);
+      } else if (change.type == 'removed'){
+          let li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
+          cafeList.removeChild(li);
+      }
+  });
+});
