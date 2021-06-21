@@ -22,3 +22,26 @@ function search_fun(){
   if (input.value.toUpperCase() == ""){
   document.getElementById("search-result").innerHTML= "Enter some keywords!";}
 }
+
+const cafeList = document.querySelector('#myUL') ;
+// create element and render cafe
+function renderCafe(doc){
+  let li = document.createElement('li');
+  let games = document.createElement('a');
+  
+  li.setAttribute('data-id', doc.id);
+  games.textContent = doc.data().Game;
+  games.setAttribute('href',doc.data().Link); 
+  games.setAttribute('target',"_blank");
+
+  li.appendChild(games);
+
+  cafeList.appendChild(li);
+};
+
+// getting data
+db.collection('Games').get().then(snapshot =>{
+  snapshot.docs.forEach(doc => {
+      renderCafe(doc);
+  })
+})
