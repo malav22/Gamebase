@@ -4,8 +4,7 @@
    <link rel="stylesheet" href="homepage.css">
    <link href="img/favicon.png" rel="shortcut icon">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+   
 </head>
 <body>
 <div class="navbar">
@@ -14,7 +13,7 @@
     <a href="contact.html" target="_self">Contact</a>
     <a href="login.html" target="_self">Login</a>
     <a href="signup.html" target="_self">SignUp</a>
-    <a href=# class="loggedin">Logout</a>
+    <a href=# id="logout">Logout</a>
     <div class="search-container">
      <form>
        <input type="reset" value="Clear">
@@ -34,7 +33,10 @@
 <p id="new-addition">Games recently added : </p>
 <ul id="myUL" style="list-style-type:none;margin:0;padding:0;">
 </ul>
-
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
 <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -47,16 +49,19 @@
         appId: "1:1033954537145:web:22c60966029f61d3e8f568",
         measurementId: "G-BTSP91LNX3"
     };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    //firebase.analytics();
-    const db = firebase.firestore();
-    db.settings({ timestampsInSnapshots: true}); //
-    </script>
     
-<script src="homepage.js"></script>
-</body>
- <footer>
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    db.settings({TimestampsInSnapshots: true});
+    </script>
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="homepage.js"></script>
+   <script src="logout.js"></script>
+  </body>
+  <footer>
   <p><a href="https://iitism.ac.in"><img style="width:40px;height:30px;" alt="IIT ISM LOGO"src="img/iit-ism-logo.png"></a> <img style="width:40px;height:30px;" alt="Indian flag"src="img/india_flag.png"></p>
   <p>Malav Thakkar 😎</p> 
  </footer>

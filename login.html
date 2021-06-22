@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<head>
-  <title>LogIn-Gamebase</title>
-  <link rel="stylesheet" href="login.css">
-  <link href="img/favicon.png" rel="shortcut icon">
-</head>
-<body>
-<h1>Work is under progress. Stay tuned!<h1>
-<img src="img/login.png" alt="login" class="center-image">
-<form class="center-form">
-  <h3 style="color:#000;">Login</h3>
-  <input type="text" id="" name="" placeholder="Username" required><br>
-  <input type="password" id="" name="" placeholder="Password" required><br>
-  <input class="submit-button" type="submit" value="Let's Go!">
-</form>
-<div class="center-form">
-<a href="homepage.html"><img src="img/home.png"  width="25px" height="25px"> </a><br>
-</div>
+  <head>
+    <title>LogIn-Gamebase</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="img/favicon.png" rel="shortcut icon">
+  </head>
+  <body>
+    <h1 align="center">Work is under progress. Stay tuned!<h1>
+    <img src="img/login.png" alt="login" class="center-image">
+    <form id="login-form" class="center-form">
+      <h3 style="color:#000;">Login</h3>
+      <input type="email" id="login-email" placeholder="example@example.com" required><br>
+      <input type="password" id="login-password"  placeholder="Password" required><br>
+      <input class="submit-button" type="submit" value="Let's Go!">
+    </form>
+    <div class="center-form"><h6 align="center">New users</h6><a href="signup.html">SignUp</a></div>
+    <div class="center-form">
+      <a href="homepage.html"><img src="img/home.png"  width="25px" height="25px"> </a><br>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCAvtKJ_O2rLJgxmvemNJ0acD5Xej4i-ww",
+        authDomain: "gamebase-c0c65.firebaseapp.com",
+        projectId: "gamebase-c0c65",
+        storageBucket: "gamebase-c0c65.appspot.com",
+        messagingSenderId: "1033954537145",
+        appId: "1:1033954537145:web:22c60966029f61d3e8f568",
+        measurementId: "G-BTSP91LNX3"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+    db.settings({ timestampsInSnapshots: true}); //
+    </script>
 <script src="login.js"></script>
 </body>
 <footer><img src="img/website-logo.png" width="125px" height="40px"></footer>
