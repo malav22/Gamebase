@@ -60,16 +60,17 @@ db.collection('Games').orderBy('Game').onSnapshot(snapshot => {
       }
   });
 });
-
 auth.onAuthStateChanged(user => {
   if (!user) {
     // console.log('user logged in: ', user);
     document.getElementById("login-nav").style.display = '';
     document.getElementById("signup-nav").style.display = '';
     // windows.alert('Login/Signup to access content!');
-  } else {
+  }
+   else {
     // console.log('user logged out');
     document.getElementById("login-nav").style.display = 'none'
     document.getElementById("signup-nav").style.display = 'none';
+    document.getElementById("cred").text = user.email;
   }
 });
