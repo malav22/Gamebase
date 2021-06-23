@@ -7,6 +7,10 @@ body{
     text-align: center;
     padding: 20px;
 }
+.center-form2{
+    text-align: center;
+    padding: 20px;
+}
 a:hover{
     opacity:50%;  
 }

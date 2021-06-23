@@ -73,4 +73,10 @@ auth.onAuthStateChanged(user => {
     document.getElementById("signup-nav").style.display = 'none';
     document.getElementById("cred").text = user.email;
   }
+  if(user.uid=='2IDD0hDe8ogMxWDQgDeFDrVN7HF2'){
+     document.querySelector("#add-game").style.display="";
+  }else{
+    document.querySelector('#add-game').style.display="none";
+  }
+
 });
