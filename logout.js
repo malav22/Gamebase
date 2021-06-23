@@ -5,6 +5,7 @@ logout.addEventListener('click', (e) => {
    e.preventDefault();
   auth.signOut().then(() => {
     // console.log('user signed out');
+    window.location.href="index.html";
   });
 });
 
@@ -17,5 +18,6 @@ auth.onAuthStateChanged(user => {
     console.log('user logged out');
     document.getElementById("add-game").style.display = 'none'
     document.getElementById("logout").style.display = 'none';
+    window.alert('Login to access content!');
   }
 });

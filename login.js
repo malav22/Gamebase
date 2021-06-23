@@ -12,6 +12,7 @@ loginForm.addEventListener('submit', (e) => {
     // console.log(cred.user);
     // reset form
     loginForm.reset();
+    window.alert('User successfully logged in.');
   });
 
 });
