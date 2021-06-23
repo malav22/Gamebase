@@ -51,7 +51,7 @@ function renderCafe(doc){
 db.collection('Games').orderBy('Game').onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
-      console.log(change.doc.data());
+      // console.log(change.doc.data());
       if(change.type == 'added'){
           renderCafe(change.doc);
       } else if (change.type == 'removed'){
@@ -59,4 +59,31 @@ db.collection('Games').orderBy('Game').onSnapshot(snapshot => {
           cafeList.removeChild(li);
       }
   });
+});
+
+// const loggedoutlinks = document.querySelectorAll('.loggedout');
+// const loggedinlinks = document.querySelectorAll('.loggedin');
+
+// const setupUI = (user) => {
+//   if (user) {
+//     loggedinlinks.forEach(item => item.style.display='block');
+//     loggedoutlinks.forEach(item => item.style.display='none');
+//     getElementById
+//   }
+//   else{
+//     loggedinlinks.forEach(item => item.style.display='none');
+//     loggedoutlinks.forEach(item => item.style.display='block');
+//   }
+// }
+
+auth.onAuthStateChanged(user => {
+  if (!user) {
+    console.log('user logged in: ', user);
+    document.getElementById("login-nav").style.display = '';
+    document.getElementById("signup-nav").style.display = '';
+  } else {
+    console.log('user logged out');
+    document.getElementById("login-nav").style.display = 'none'
+    document.getElementById("signup-nav").style.display = 'none';
+  }
 });
