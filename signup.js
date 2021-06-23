@@ -16,5 +16,6 @@ signup.addEventListener('submit', (e) => {
         // console.log(cred.user);
         signup.reset();
         window.alert('User successfully signed up.');
+        window.location.href ="homepage.html"
     });    
 });
