@@ -1,6 +1,6 @@
 body{
     background-image: url(img/bg_82.gif);
-    background-repeat: none ;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 .center-form{
@@ -39,7 +39,7 @@ footer{
     font-size: 20px;;
 }
 #hey {
-    border:0px solid #000;
+    border:0px solid rgb(0, 0, 0);
     background-color: transparent;
     border-radius: 0px;
     width: 30px;

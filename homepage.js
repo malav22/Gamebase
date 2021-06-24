@@ -1,20 +1,17 @@
-document.getElementById("search-result").innerHTML = "Your search suggestions will appear here.";
+document.getElementById("search-result").innerHTML = "Your search suggestions will appear here. <br> Type some keywords in the searchbar.";
 document.getElementById("search-result").style.color="#F00";
 function search_fun(){
   
   var input, filter, ul, li, a, i, txtValue;
-  
   input = document.getElementById('searchbar');
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName('li');
   document.getElementById("search-result").innerHTML = "";
-  
   for (i = 0; i < li.length; i++) {
 
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
-
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
     document.getElementById("search-result").innerHTML = document.getElementById("search-result").innerHTML + li[i].innerHTML + "<br>";
     continue;
@@ -23,6 +20,13 @@ function search_fun(){
   if (input.value.toUpperCase() == ""){
   document.getElementById("search-result").innerHTML= "Enter some keywords!";}
 }
+// function myfun(){
+// sr = document.getElementById('search-result');
+// for (i = 0; i < sr.length; i++) {
+//   a = sr.getElementsByTagName("a");
+//   a.setAttribute('style',"border:2px solid white;")
+//   } 
+
 
 const cafeList = document.querySelector('#myUL') ;
 // create element and render cafe
@@ -34,7 +38,7 @@ function renderCafe(doc){
   games.textContent = doc.data().Game;
   games.setAttribute('href',doc.data().Link); 
   games.setAttribute('target',"_blank");
-
+  
   li.appendChild(games);
 
   cafeList.appendChild(li);

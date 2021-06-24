@@ -36,6 +36,7 @@ body{
   margin-right: 16px;
   background-color: black;
   color:#fff;
+  border-radius: 10px;
 }
 .search-container input[type = reset]:hover{
   opacity:50%;
@@ -50,6 +51,7 @@ body{
   margin-top: 10px;
   margin-right: 2px;
   font-size: 20px;
+  border-radius: 10px;
 }
 .main {
   padding-top: 20px;
@@ -79,7 +81,9 @@ footer p a:hover{
 #myUL{
   color: #fff;
   text-align: center;
-  margin: auto;
+  border: 5px double rgb(255, 255, 255);
+  align-items: center;
+  width: 40%;
 }
 #new-addition{
   color: #fff;
@@ -89,15 +93,42 @@ footer p a:hover{
 #searchbar{
   background-image: url(img/search-icon.png);
   background-repeat: no-repeat;
-  background-position: 8px 4px;
+  background-position: 1% 50%;
   background-size: 20px 20px;
-  padding: 5px 5px 5px 35px;
+  padding: 5px 5px 5px 25px;
 }
 #search-result{
   color: #fff;
   text-align: center;
-  border: 1px solid #fff;
+  border: 5px groove #fff;
   margin:auto;
-  width: 400px;
-  height: 200px;
+  width: 40%;
+  height: 20%;
+  margin-top: 10px;
+  margin-bottom:20px;
+  line-height: 20px;
+}
+li{
+  border: 5px solid rgb(81, 4, 223);
+  border-radius: 10px;
+  height:50%;
+  width: 50%;
+  font-size:20px;
+  margin: 10px auto 10px auto;
+  background-color: rgb(36, 122, 250);
+}
+li:hover{
+  background-color: rgb(55,150,254);
+}
+li a{
+  text-decoration: none;
+  color: rgb(236, 236, 236);
+}
+footer img{
+  border:5px solid rgb(68, 68, 68);
+  border-radius:10px;
+} 
+#search-results p li a{
+  border:5px solid #fff;
+  text-decoration: none;
 }

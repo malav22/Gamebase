@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-   <title>Gamebase</title>
+   <title>FunCrown</title>
    <link rel="stylesheet" href="homepage.css">
    <link href="img/favicon.png" rel="shortcut icon">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
     <a style="display:none;" href="AddGame/index.html" id="add-game">Add Game</a>
     <div class="search-container">
      <form>
-       <input type="reset" value="Clear">
+       <input type="reset" value="Clear" onclick="document.location.reload();">
        <input id="searchbar" type="text" placeholder="Search" name="search" autocomplete="off" onkeyup="search_fun()">
      </form>
     </div>
@@ -28,12 +28,11 @@
   <h4>The ultimate Gaming Zone</h4><br>
   <h1>Have fun</h1><br>
 </div> 
-<p id="search-box">Search Suggestions :</p>  
+<p id="search-box">Search Suggestions ↴</p>  
 
 <p id="search-result"></p>
-<p id="new-addition">Games recently added : </p>
-<ul id="myUL" style="list-style-type:none;margin:0;padding:0;">
-</ul>
+<p id="new-addition">Games recently added by admin ↴</p>
+<div align="center" style="margin-top: 20px;margin-bottom: 20px;"><ul id="myUL" style="list-style-type:none;margin:0;padding:0;"></ul></div>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
