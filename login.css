@@ -2,12 +2,9 @@ body{
     background-image: url(img/background.jfif);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #4d29a5;
 }
 .center-form{
-    text-align: center;
-    padding: 20px;
-}
-.center-form2{
     text-align: center;
     padding: 20px;
 }
@@ -15,8 +12,40 @@ a:hover{
     opacity:50%;  
 }
 .submit-button{
-    background-color: #2196F3;
+    background-color:rgb(5, 108, 204) ;
     font-size: 20px;
+    border: 5px solid #000;
+    border-radius:20px;
+    margin-top:20px;
+    padding:5px;
+}
+.submit-button:hover{
+    background-color: #fff;
+    border-color: #2196F3;
+}
+#login-form{
+    border: 5px double #fff;
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#login-form h3{
+    margin:0px;
+    margin-top:10px;
+    padding: 0px;
+}
+#login-email {
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 175px;
+    height:20px;
+}
+#login-password{
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 175px;
+    height:20px;
 }
 .center-image{
     display:block;
@@ -25,7 +54,24 @@ a:hover{
     width: 150px;
     height: 150px;
 }
+#home-button{
+    border: 3px solid #000;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;;
+    width: 50px;
+}
+#home-button h6{
+    margin:0px;
+    padding: 0px;
+    font-size: 15px;;
+}
 footer{
     color: #fff;
     text-align: center;
   }
+footer img{
+    border:5px solid #000;
+    border-radius:10px;
+}  
