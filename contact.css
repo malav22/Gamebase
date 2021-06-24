@@ -1,7 +1,7 @@
 body{
-    background-image: url(img/contact-us-2.jpg);
+    background-image: url(img/bg_82.gif);
     background-repeat: none ;
-    background-size: cover;
+    background-size: 100%;
 }
 .center-form{
     text-align: center;
@@ -10,10 +10,38 @@ body{
 a:hover{
     opacity: 50%;  
 }
-a{
-    padding:1px;
+img{
+    margin:5px;
+    border:2px solid #000;
+    border-radius:10px;
+    background-color: rgb(255, 255, 255);
 }
 footer{
-    color: rgb(16, 84, 211);
+    color: rgb(0, 0, 0);
     text-align: center;
+    font-size:30px;
   }
+#home-button{
+    border: 3px solid #000;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;;
+    width: 50px;
+}
+#home-button img:hover{
+    background-color:rgb(16, 131, 197);
+    border-radius: 8px;
+}
+#home-button h6{
+    margin:0px;
+    padding: 0px;
+    font-size: 20px;;
+}
+#hey {
+    border:0px solid #000;
+    background-color: transparent;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+}

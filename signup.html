@@ -5,19 +5,20 @@
     <link href="img/favicon.png" rel="shortcut icon">
   </head>
   <body>
-    <h1 align="center">Work is under progress. Stay tuned!<h1>
-    <img src="img/signup.png" alt="signup" class="center-image">
+    <h1 align="center">SignUp to FunCrown<h1>
+    <img style="padding:20px" src="img/signup.png" alt="signup" class="center-image">
     <form id="signup-form" class="center-form">
     <h3 style="color:#000;">Sign Up</h3>
     <input type="email" id="signup-email"  placeholder="example@example.com" required autocomplete="off"><br>
     <input type="password" id="signup-password" placeholder="Password" required><br>
-    <input class="submit-button" type="submit" value="Sign Up" onclick="final()">
+    <input class="submit-button" type="submit" value="Sign Up">
     <input class="submit-button" type="reset">
     </form>
     
-    <div class="center-form"><h6 align="center">Existing users</h6><a href="login.html">Login</a></div>
-    <div class="center-form">
-    <a href="homepage.html"><img src="img/home.png"  width="25px" height="25px"> </a>
+    <p align="center">Existing user → <button id="button1" align="center" onclick="window.location.href='login.html'">LogIn</button></p>
+    <div id="home-button">
+      <a href="homepage.html"><img src="img/home.png"  width="25px" height="25px"> </a><br>
+      <h6>Home</h6>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
