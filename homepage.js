@@ -1,7 +1,6 @@
 document.getElementById("search-result").innerHTML = "Your search suggestions will appear here. <br> Type some keywords in the searchbar.";
 document.getElementById("search-result").style.color="#F00";
 function search_fun(){
-  
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('searchbar');
   filter = input.value.toUpperCase();
@@ -9,7 +8,6 @@ function search_fun(){
   li = ul.getElementsByTagName('li');
   document.getElementById("search-result").innerHTML = "";
   for (i = 0; i < li.length; i++) {
-
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {

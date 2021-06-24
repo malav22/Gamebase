@@ -56,6 +56,12 @@ body{
 .main {
   padding-top: 20px;
   margin-top: 50px; /* Add a top margin to avoid content overlay */
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main img{
+  width: 275px;
+  height: 150px;
 }
 h1 {
     text-align: center;
@@ -106,7 +112,24 @@ footer p a:hover{
   height: 20%;
   margin-top: 10px;
   margin-bottom:20px;
-  line-height: 20px;
+  padding: 15px;
+}
+#search-result a{
+  border: 5px solid rgb(81, 4, 223);
+  border-radius: 10px;
+  display: block;
+  height:50%;
+  width: 50%;
+  font-size:20px;
+  margin: 10px auto 10px auto;
+  background-color: rgb(36, 122, 250);
+  margin-top: 5px;
+  margin-bottom:5px;
+  color : white;
+  text-decoration: none;
+}
+#search-result a:hover{
+  background-color: rgb(55,150,254);
 }
 li{
   border: 5px solid rgb(81, 4, 223);
