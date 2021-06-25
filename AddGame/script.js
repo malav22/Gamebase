@@ -11,7 +11,7 @@ function renderCafe(doc){
    li.setAttribute('data-id', doc.id);
    games.textContent = doc.data().Game;
    links.textContent = doc.data().Link;
-   cross.textContent = "x";
+   cross.textContent = "✖";
 
    li.appendChild(games);
    li.appendChild(links);

@@ -99,3 +99,19 @@ p{
     background-color:rgb(16, 131, 197);
     border-radius: 8px;
 }
+#login-form input[type=email]:focus{
+    outline: none;
+    border-bottom: 4px solid #ff0000;
+    transition: all ease 0.2s;
+    position: relative;
+    top:2px;
+    left:2px;
+  }
+#login-form input[type=password]:focus{
+    outline: none;
+    border-bottom: 4px solid #ff0000;
+    transition: all ease 0.2s;
+    position: relative;
+    top:2px;
+    left:2px;
+  }
